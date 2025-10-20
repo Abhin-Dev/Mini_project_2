@@ -25,9 +25,16 @@ await bootstrap();
 
 const app = express();
 
-app.use(cors());
+const corsOptions = {
+  origin: "http://localhost:8080", // Your frontend's origin
+  credentials: true, // Allow sending cookies
+  optionsSuccessStatus: 200 // Some legacy browsers choke on 204
+};
+
+app.use(cors(corsOptions));
 
 app.use(express.json());
+
 
 app.get("/", (req, res) => res.send("RootConnect API running 🚀"));
 

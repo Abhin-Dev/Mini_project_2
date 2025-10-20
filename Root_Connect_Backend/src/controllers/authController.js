@@ -23,11 +23,16 @@ export const registerUser = async (req, res) => {
 
 export const loginUser = async (req, res) => {
   try {
-    const { email, password } = req.body;
-    const user = await User.findOne({ email });
+    const { identifier, password } = req.body;
+
+    // 2. Find the user by either their email OR their phone number
+    const user = await User.findOne({
+      $or: [{ email: identifier }, { phone: identifier }],
+    });
     if (!user) return res.status(400).json({ message: "Invalid credentials" });
 
     const ok = await bcrypt.compare(password, user.password);
+    console.log(password,user.password,"Comparison result:", ok);
     if (!ok) return res.status(400).json({ message: "Invalid credentials" });
 
     const token = createToken(user);
