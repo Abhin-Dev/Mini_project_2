@@ -1,0 +1,83 @@
+# ======================================================
+# RootConnect Project - Node.js + React.js Full Stack
+# ======================================================
+
+# --------------------
+# Node.js dependencies
+# --------------------
+**/node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# --------------------
+# Build / Production
+# --------------------
+# React build folder
+Root_Connect_Frontend/build/
+# Backend build/dist folder
+Root_Connect_Backend/dist/
+# Temporary caches
+.cache/
+.temp/
+.tmp/
+
+# --------------------
+# Environment Variables
+# --------------------
+.env
+.env.local
+.env.development.local
+.env.production.local
+.env.test.local
+
+# --------------------
+# Logs
+# --------------------
+logs/
+*.log
+*.log.*
+debug.log
+
+# --------------------
+# Testing / Coverage
+# --------------------
+coverage/
+jest-coverage/
+lcov-report/
+
+# --------------------
+# OS / System Files
+# --------------------
+.DS_Store
+Thumbs.db
+
+# --------------------
+# Editors / IDE
+# --------------------
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# --------------------
+# Miscellaneous
+# --------------------
+*.tmp
+*.temp
+*.bak
+*.orig
+*.rej
+*.swp
+*.swo
+*.tsbuildinfo
+
+# --------------------
+# Documents
+# --------------------
+# Keep abstracts or PDFs if needed; comment this line if you want to track them
+*.pdf
